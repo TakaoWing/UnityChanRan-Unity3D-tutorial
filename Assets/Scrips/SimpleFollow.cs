@@ -6,10 +6,11 @@ public class SimpleFollow : MonoBehaviour {
 
 	Vector3 diff;
 
-	public GameObject target; // 追従ターゲット
+	GameObject target; // 追従ターゲット
 	public float followSpeed;
 
 	void Start () {
+		target = GameObject.Find ("Nejiko");
 		diff = target.transform.position - transform.position; // 追従距離の計算
 	}
 
